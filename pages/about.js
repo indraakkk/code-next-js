@@ -1,3 +1,8 @@
+import Header from './Header'
+
 export default ()=> (
-    <div>This is the about page</div>
+    <div>
+        <Header />
+        <p>This is the about page</p>
+    </div>
 )

@@ -1,15 +1,12 @@
-// this the link API
-import Link from 'next/link'
-import Unexpected_A from 'third-library'
+import Header from "./Header";
 
-export default ({ href, name })=> (
-    
-    <Link href={href} passHref>
-        <Unexpected_A>
-            {name}
-        </Unexpected_A>
-    </Link>
 
+const Index = ()=> (
+    <div>
+        <Header />
+        <p>This is home</p>
+    </div>
 )
 
+export default Index
     
