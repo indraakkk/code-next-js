@@ -67,7 +67,7 @@ module.exports =
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 12);
+/******/ 	return __webpack_require__(__webpack_require__.s = 10);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -167,27 +167,30 @@ module.exports = require("isomorphic-unfetch");
 /* 7 */,
 /* 8 */,
 /* 9 */,
-/* 10 */,
-/* 11 */,
-/* 12 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(13);
+module.exports = __webpack_require__(11);
 
 
 /***/ }),
-/* 13 */
+/* 11 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_regenerator__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_regenerator__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_MyLayout_js__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_isomorphic_unfetch__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_isomorphic_unfetch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_isomorphic_unfetch__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_styled_jsx_style__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_styled_jsx_style___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_styled_jsx_style__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_MyLayout_js__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_next_link__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_next_link___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_next_link__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_isomorphic_unfetch__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_isomorphic_unfetch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_isomorphic_unfetch__);
+
 
 
 
@@ -196,53 +199,95 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 
-var Post = function Post(props) {
-  return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__components_MyLayout_js__["a" /* default */], null, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("h1", null, props.show.name), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("p", null, props.show.summary.replace(/<[/]?p>/g, '')), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("img", {
-    src: props.show.image.medium
+
+var ShowLink = function ShowLink(_ref) {
+  var show = _ref.show;
+  return __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement("li", {
+    className: "jsx-3150233030"
+  }, __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_next_link___default.a, {
+    as: "/p/".concat(show.id),
+    href: "/post?id=".concat(show.id)
+  }, __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement("a", {
+    className: "jsx-3150233030"
+  }, show.name)), __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_styled_jsx_style___default.a, {
+    styleId: "3150233030",
+    css: ["h1.jsx-3150233030,a.jsx-3150233030{font-family:\"Arial\";}", "li.jsx-3150233030{list-style:none;padding:5px;}", "a.jsx-3150233030{-webkit-text-decoration:none;text-decoration:none;color:blue;}", "a.jsx-3150233030:hover{opacity:0.6;}"]
+  }));
+}; // =======with API=============
+
+
+var Index = function Index(props) {
+  return __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__components_MyLayout_js__["a" /* default */], null, __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement("h1", {
+    className: "jsx-1634957107"
+  }, "Batman TV Shows"), __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement("ul", {
+    className: "jsx-1634957107"
+  }, props.shows.map(function (_ref2) {
+    var show = _ref2.show;
+    return __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(ShowLink, {
+      key: show.id,
+      show: show
+    });
+  })), __WEBPACK_IMPORTED_MODULE_2_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_styled_jsx_style___default.a, {
+    styleId: "1634957107",
+    css: ["ul.jsx-1634957107{-webkit-padding-start:0px !important;}"]
   }));
 };
 
-Post.getInitialProps =
+Index.getInitialProps =
 /*#__PURE__*/
-function () {
-  var _ref = _asyncToGenerator(
-  /*#__PURE__*/
-  __WEBPACK_IMPORTED_MODULE_0__babel_runtime_regenerator___default.a.mark(function _callee(context) {
-    var id, res, show;
-    return __WEBPACK_IMPORTED_MODULE_0__babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
-      while (1) {
-        switch (_context.prev = _context.next) {
-          case 0:
-            id = context.query.id;
-            _context.next = 3;
-            return __WEBPACK_IMPORTED_MODULE_3_isomorphic_unfetch___default()("https://api.tvmaze.com/shows/".concat(id));
+_asyncToGenerator(
+/*#__PURE__*/
+__WEBPACK_IMPORTED_MODULE_0__babel_runtime_regenerator___default.a.mark(function _callee() {
+  var res, data;
+  return __WEBPACK_IMPORTED_MODULE_0__babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
+    while (1) {
+      switch (_context.prev = _context.next) {
+        case 0:
+          _context.next = 2;
+          return __WEBPACK_IMPORTED_MODULE_5_isomorphic_unfetch___default()('https://api.tvmaze.com/search/shows?q=batman');
 
-          case 3:
-            res = _context.sent;
-            _context.next = 6;
-            return res.json();
+        case 2:
+          res = _context.sent;
+          _context.next = 5;
+          return res.json();
 
-          case 6:
-            show = _context.sent;
-            console.log("Fetched show: ".concat(show.name));
-            return _context.abrupt("return", {
-              show: show
-            });
+        case 5:
+          data = _context.sent;
+          console.log("Show data fetched. Count: ".concat(data.length));
+          return _context.abrupt("return", {
+            shows: data
+          });
 
-          case 9:
-          case "end":
-            return _context.stop();
-        }
+        case 8:
+        case "end":
+          return _context.stop();
       }
-    }, _callee, this);
-  }));
-
-  return function (_x) {
-    return _ref.apply(this, arguments);
-  };
-}();
-
-/* harmony default export */ __webpack_exports__["default"] = (Post);
+    }
+  }, _callee, this);
+}));
+/* harmony default export */ __webpack_exports__["default"] = (Index); // ========without fetch data========
+// const getPosts = ()=> {
+//   return[
+//     { id: 'hello-nextjs', title: 'Hello Next.js' },
+//     { id: 'learn-nextjs', title: 'Learn Next.js is awesome' },
+//     { id: 'deploy-nextjs', title: 'Deploy apps with ZEIT' }
+//   ]
+// }
+// export default ()=> (
+//   <Layout>
+//     <h1>My Blog</h1>
+//     <ul>
+//       {getPosts().map((post)=> (
+//         <li key={post.id}>
+//           <Link as={`/p/${post.id}`} href={`/post?title=${post.title}`}>
+//             <a>{post.title}</a>
+//           </Link>
+//         </li>
+//       ))}
+//     </ul>
+//   </Layout>
+// )
+// ==================================
 
 /***/ })
 /******/ ]);

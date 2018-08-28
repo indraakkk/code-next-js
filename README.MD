@@ -5,3 +5,7 @@
 ### Fetch data from tvmaze
 
 ![fetched-data](./static/fetched-data.png)
+
+### demo
+
+[demo-site-with-next-js](https://code-nextjs.now.sh/)
