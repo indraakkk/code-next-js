@@ -4,16 +4,21 @@ const linkStyle = {
     marginRight: 15
 }
 
-const Header = ()=> (
-    <div>
-        <Link href='/'>
-            <a style={linkStyle}>Home</a>
-        </Link>
-        <Link href='/about'>
-            <a style={linkStyle}>About</a>
-        </Link>
+const Header = () => ( 
+<div>
+    <Link href = '/' >
+    <a style = {
+        linkStyle
+    }> Home </a> 
+    </Link> 
+    <Link href = '/about' >
+    <a style = {
+        linkStyle
+    }> About </a>
+    </Link>
 
-        <style jsx>{`
+    <style jsx > {
+        `
         a {
             font-family: Arial;
             text-decoration: none;
@@ -23,8 +28,8 @@ const Header = ()=> (
         a:hover {
             opacity: 0.6;
         }
-        `}
-        </style>
+        `
+    } </style>
     </div>
 )
 

@@ -2,8 +2,7 @@ import Layout from '../components/MyLayout.js'
 import Link from 'next/link'
 import fetch from 'isomorphic-unfetch'
 
-
-const ShowLink = ({ show })=> (
+const ShowLink = ({ show }) => (
   <li>
     <Link as={`/p/${show.id}`} href={`/post?id=${show.id}`}>
       <a>{show.name}</a>
@@ -11,8 +10,9 @@ const ShowLink = ({ show })=> (
 
     {/* styling */}
     <style jsx>{`
-      h1, a{
-        font-family: "Arial";
+      h1,
+      a {
+        font-family: 'Arial';
       }
 
       li {
@@ -33,22 +33,20 @@ const ShowLink = ({ show })=> (
 )
 
 // =======with API=============
-const Index = (props) => (
+const Index = props => (
   <Layout>
     <h1>Batman TV Shows</h1>
     <ul>
-      {props.shows.map(({show}) => (
+      {props.shows.map(({ show }) => (
         <ShowLink key={show.id} show={show} />
       ))}
     </ul>
 
     <style jsx>{`
-    ul {
-      -webkit-padding-start: 0px !important;
-    }
-
+      ul {
+        -webkit-padding-start: 0px !important;
+      }
     `}</style>
-    
   </Layout>
 )
 
@@ -64,9 +62,6 @@ Index.getInitialProps = async function() {
 }
 
 export default Index
-
-
-
 
 // ========without fetch data========
 // const getPosts = ()=> {
